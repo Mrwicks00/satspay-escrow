@@ -9,6 +9,10 @@ requirements = []
 path = 'contracts/satspay-escrow.clar'
 clarity_version = 2
 epoch = 'latest'
+[contracts.sbtc-token]
+path = 'contracts/sbtc-token.clar'
+clarity_version = 2
+epoch = 'latest'
 [repl.analysis]
 passes = [
     'check_checker',

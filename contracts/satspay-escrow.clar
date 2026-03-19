@@ -48,6 +48,9 @@
 ;; Running total of sBTC currently held in escrow (micro-sBTC units)
 (define-data-var total-escrowed uint u0)
 
+;; Utility counter (as requested)
+(define-data-var counter uint u0)
+
 ;; ===================================================================
 ;; Data maps
 ;; ===================================================================
@@ -250,4 +253,22 @@
 ;; Running total of micro-sBTC currently held by this contract.
 (define-read-only (get-total-escrowed)
   (var-get total-escrowed)
+)
+
+;; ===================================================================
+;; Utility functions
+;; ===================================================================
+
+(define-public (increment-counter)
+  (begin
+    (var-set counter (+ (var-get counter) u1))
+    (ok (var-get counter))
+  )
+)
+
+(define-public (decrement-counter)
+  (begin
+    (var-set counter (- (var-get counter) u1))
+    (ok (var-get counter))
+  )
 )

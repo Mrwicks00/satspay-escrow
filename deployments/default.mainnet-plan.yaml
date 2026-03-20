@@ -11,14 +11,14 @@ plan:
         - contract-publish:
             contract-name: satspay-escrow
             expected-sender: SP1GNDB8SXJ51GBMSVVXMWGTPRFHGSMWNNBEY25A4
-            cost: 1134575
+            cost: 86220
             path: contracts/satspay-escrow.clar
             anchor-block-only: true
             clarity-version: 2
         - contract-publish:
             contract-name: sbtc-token
             expected-sender: SP1GNDB8SXJ51GBMSVVXMWGTPRFHGSMWNNBEY25A4
-            cost: 1132861
+            cost: 9820
             path: contracts/sbtc-token.clar
             anchor-block-only: true
             clarity-version: 2
